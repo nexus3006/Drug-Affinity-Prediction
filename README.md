@@ -26,7 +26,7 @@ Regression performance varies:
 -Poorer when generalising to new drugs or unseen protein-drug pairs
 -Negative R²/RM² indicates poor calibration — the model predicts trends well but struggles with actual values.
 
-----**Second Model - CNN**-------
+------**Second Model - CNN**-------
 
 
 Using a convolutional neural network (CNN) improved performance in generalising to new proteins and drugs (especially for ranking via CI).
