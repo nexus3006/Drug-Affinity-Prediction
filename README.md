@@ -1,5 +1,8 @@
 # Drug-Affinity-Prediction
------**First Model - NN**------
+
+https://www.kaggle.com/datasets/christang0002/davis-and-kiba?resource=download&select=davis-filter.txt 
+Here is the dataset used for the model implementation. I have used the Davis dataset for this particular exercise
+# **First Model - NN**
 
 Architecture: Two FC branches (one for drugs, one for proteins) → merged → regression head
 
@@ -7,7 +10,7 @@ Input: One-hot SMILES + integer-encoded amino acids
 
 Loss: MSE  Optimizer: Adam  Epochs: 10
 
-Results Summary
+**Results Summary**
 I have evaluated the model on four biologically relevant splits — testing whether the model can generalize to new proteins or drugs it hasn't seen during training.
 
 | Split               | CI    | MSE  | R²    | RM²   | Pearson R |
@@ -26,7 +29,7 @@ Regression performance varies:
 -Poorer when generalising to new drugs or unseen protein-drug pairs
 -Negative R²/RM² indicates poor calibration — the model predicts trends well but struggles with actual values.
 
-------**Second Model - CNN**-------
+# **Second Model - CNN** 
 
 
 Using a convolutional neural network (CNN) improved performance in generalising to new proteins and drugs (especially for ranking via CI).
